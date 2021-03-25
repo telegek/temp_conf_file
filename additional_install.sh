@@ -20,13 +20,13 @@ cd ~/src/Firmware
 
 git submodule update --init --recursive
 
-sudo apt install python3-pip
+sudo apt install python3-pip -y
 pip3 install empy
 pip3 install packaging
 pip3 install toml
 pip3 install numpy
 pip3 install jinja2
-sudo apt-get install libgstreamer1.0-0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-doc gstreamer1.0-tools gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-gl gstreamer1.0-gtk3 gstreamer1.0-qt5 gstreamer1.0-pulseaudio
+sudo apt-get install libgstreamer1.0-0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-doc gstreamer1.0-tools gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-gl gstreamer1.0-gtk3 gstreamer1.0-qt5 gstreamer1.0-pulseaudio -y
 DONT_RUN=1 make px4_sitl_default gazebo
 
 source Tools/setup_gazebo.bash $(pwd) $(pwd)/build/px4_sitl_default
